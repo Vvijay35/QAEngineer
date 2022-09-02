@@ -9,6 +9,25 @@ public class Address {
 	static String country = "India";
 	
 	
+	
+	public Address() {
+		
+	}
+
+
+
+
+	public Address(int flatNo, String area, String city, int pinCode) {
+		
+		this.flatNo = flatNo;
+		this.area = area;
+		this.city = city;
+		this.pinCode = pinCode;
+	}
+
+
+
+
 	public void printAddressDetails()
 	{
 		System.out.println("The flat no is "+flatNo + 

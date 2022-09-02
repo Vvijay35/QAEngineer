@@ -38,16 +38,30 @@ public class TestStudent {
 		
 		System.out.println("=================");
 		
-		Student s2 = new Student();
-		s2.sName = "Raheem";
-		s2.std = 4;
-		s2.feesDue = 6000.50;
-		s2.isRuralStudent= false;
-		System.out.println(s2.schoolName);
+		Address a2 = new Address();
+		
+		a2.flatNo = 420;
+		a2.area = "Kacheguda";
+		a2.city = "Hyderabad";
+		a2.pinCode = 56000;
+		
+		//Student s2 = new Student("Shamu",4, 4000.50, false, true, a2);
+		
+		Student s2 = new Student("Shamu",4, 4000.50, false, true, a2);
+			
+		
+		s2.printAddressDetailsOfStudent();
 		
 		
-		//s2.printAddressDetailsOfStudent();
+		System.out.println("++++++++++++++");
 		
+		Student s3 = new Student("Raheem", 6, 400.50);
+		
+		//s3.a = a2;
+		
+		//3.printAddressDetailsOfStudent();
+		
+		s3.checkStudentFeesStatus();
 		
 
 	}
