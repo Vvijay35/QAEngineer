@@ -1,84 +1,26 @@
-package com.corejava.interfaces;
+package com.corejava.collections;
 
-public class Dog extends Memal implements Animal,Pet{
-	
+public class Dog implements Comparable<Dog>{
+
 	int age;
-
+	String colour;
 	
-	public void eat() {
-		System.out.println(" The dog of the age "+age+" is eating.....");
-		
-	}
-
-	
-	public void sleep() {
-		System.out.println(" The dog is sleeping.....");
-		
-	}
-
-	
-	public void drink() {
-		System.out.println(" The dog is Drinking........");
-		
-	}
-	
-	public void bark()
+	public void eat()
 	{
-		System.out.println(" The dog of the age "+age+" is barking bow bow.....");
+		System.out.println(" The Dog of the age "+age+" of the colour "+colour +" is eating");
 	}
-
-
-
-	public void showSuperPowersOfAnimal() {
-		System.out.println(" Show the super powers that Dog has");
-		
-	}
-
 
 	
-	public void recognizeOwner() {
-		System.out.println(" The dog can recognize its owner and moves the tail when wner comes...");
-		
-	}
-
-
-	
-	public void hasMagicalPowers() {
-		System.out.println(" The Dog has Magical Powers");
-		
-	}
-	
-	public void walk()
-	{
-		System.out.println(" The dog is walking...");
-	}
-	
-	// Overridden toString() method 
 	public String toString()
 	{
-		return "This is the overriden toString Method from Dog Class";
+		return "Age "+age+" colour "+colour;
 	}
 	
-	// Overridden int method
-	public int hashCode()
-	{
-		return this.age;
-	}
+	public int compareTo(Dog o) {
 	
-	  public boolean equals(Object obj) {
-	      
-		  Dog d1 = (Dog)obj;
-		  
-		  if(this.age == d1.age)
-		  {
-			  return true;
-		  }
-		  else
-		  {
-			  return false;
-		  }
-		  
-		  
-	    }
-
+		if(this.age < o.age)
+			return -1;
+		else			
+			return 1;
+	}
 }
