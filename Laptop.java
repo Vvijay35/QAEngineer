@@ -1,13 +1,13 @@
 package com.corejava.collections;
 
-public class Mobile implements Comparable<Mobile>{
+public class Laptop {
 	
 	double price ;
 	String colour;
 	int ram;
 
 	
-	public Mobile(double price, String colour, int ram) {		
+	public Laptop(double price, String colour, int ram) {		
 		this.price = price;
 		this.colour = colour;
 		this.ram = ram;
@@ -19,15 +19,5 @@ public class Mobile implements Comparable<Mobile>{
 				
 	}
 
-
-	public int compareTo(Mobile m) {	
-		
-		if(this.price > m.price )
-			return -1;
-		else			
-			return 1;
-	}
-	
-	
 
 }
