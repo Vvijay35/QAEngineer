@@ -24,6 +24,8 @@ public class Outer {
 			
 		}	
 		
+	}
+		
 	private class InnerPrivate
 	{
 		int innerPvtAge = 10;
@@ -55,8 +57,20 @@ public class Outer {
 	}
 	
 	
-
+	static class InnerStaticClass{
+		
+		int innerStaticAge = 20;
+		static String innerStaticName = "Ramu";
+		
+		public static void printInnerStaticAge()
+		{
+			System.out.println(innerStaticName);
+			
+		}
 		
 	}
+
+		
+	
 
 }
