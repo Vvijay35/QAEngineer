@@ -1,0 +1,45 @@
+== User the below application for practing x paths..
+
+https://demo.actitime.com/login.do
+
+Absolute Xpath
+
+/html/body/div/input[1]
+
+/html/body/table/tbody/tr[2]/td[2]
+
+
+Relative Xpaths
+
+//input[@id='username'] 
+
+Anywhere in the document find the element who is having tag name as input and
+the id = 'username'
+
+/html/body/table/tbody/tr[2]/td[2] -- Absolute Xpath
+//table/tbody/tr[2]/td[2] -- Relative Xpath
+
+//select[@id='stateselect']
+
+
+//img[@id='mylogo']
+
+--When one attibute name and value is not sufficient to identify the element uniquely then add more att name and values 
+//input[@class='textbox'][@name='uname']
+
+-- Using the OR operator....
+//input[@class='textbox' and @name='uname']
+
+
+-- Identifying an element using its text  --- text is a function without any arguments text()
+//a[text()='ForgotPassword']
+
+// Finding an elemenet using a portion of the text.. contains is a function which takes 2 aruments..
+//a[contains(text(),'Forgot')]
+
+-- contains can be used wrt any attributes as well..for attribute use @
+//button[contains(@id,'cancel')]
+
+
+
+
