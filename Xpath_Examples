@@ -2,6 +2,8 @@
 
 https://demo.actitime.com/login.do
 
+
+
 Absolute Xpath
 
 /html/body/div/input[1]
@@ -39,6 +41,78 @@ the id = 'username'
 
 -- contains can be used wrt any attributes as well..for attribute use @
 //button[contains(@id,'cancel')]
+
+==================== X Path continued....
+
+(//input)[3] == To find the third input box from the available input boxes...
+
+== Fetching the email ID for Ramu
+//table/tbody/tr[2]/td[text()='Ramu']/../td[4]
+
+//table/tbody/tr/td[text()='101']/../td[4]
+
+== To find the Number of rows in the table
+//table/tbody/tr
+
+====
+
+//table//td[text()='Ramu']  -> Find a td anywhere under the table with Text as Ramu...
+
+
+== Fetching the cost of a particular Mobile from flipkart
+
+//div[text()='SAMSUNG Galaxy F13 (Waterfall Blue, 64 GB)']/../../div[2]/div[1]/div[1]/div[1]
+
+
+Axes Functions
+========================================
+== To get the parent  div
+//div[text()='SAMSUNG Galaxy F13 (Sunrise Copper, 64 GB)']/parent::div/parent::*/div[2]
+
+//div[text()='SAMSUNG Galaxy F13 (Sunrise Copper, 64 GB)']/parent::*/parent::*/div[2]
+
+== To find all the Tags which are before the context node
+//table//td[text()='Ramu']/preceding::*
+
+//table//td[text()='Ramu']/preceding::a  == Find all the links which are before the context node....
+
+======================================
+
+== To find all the tags which are below the context node...
+//table//td[text()='Ramu']/following::*
+
+//table//td[text()='Ramu']/following::select
+
+
+====================
+
+finding siblings 
+
+//table//td[text()='Ramu']/preceding-sibling::td
+//table//td[text()='Ramu']/following-sibling::td[2]
+
+
+=====================================
+To find all the ancestro wrt to conext node
+//table//td[text()='Ramu']/ancestor::*
+
+=========================================
+
+== To find all the descendants of the conext node..
+ //td[text()='Ramu']/../descendant::*
+
+
+========================================
+
+//td[text()='Ramu']/ancestor-or-self::*
+//td[text()='Ramu']/../descendant-or-self::*
+
+
+
+
+
+
+
 
 
 
