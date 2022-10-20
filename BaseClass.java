@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
 	
@@ -21,14 +22,25 @@ public class BaseClass {
 	
 	public static void launchBrowser()
 	{
-		System.setProperty("webdriver.chrome.driver", "./utilities/chromedriver.exe");		
-		driver = new ChromeDriver();	
-		driver.manage().window().maximize();
+		String browser = "firefox";
 		
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver", "./utilities/chromedriver.exe");		
+			driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("firefox"))
+		{		
+			System.setProperty("webdriver.gecko.driver", "./utilities/geckodriver.exe");
+			driver = new FirefoxDriver();
+		
+		}
+		
+		driver.manage().window().maximize();
 		// Applying implicit wait . it is applied only once where the driver is created and applicable through out the life cycle of the driver..
 		// polling interval is 500 MS ( half second )
 		
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
 	public static void launchApplication(String url)
