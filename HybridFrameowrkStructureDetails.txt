@@ -1,0 +1,42 @@
+Hybrid Automation Framework
+
+ -- Framework level reusable code	- Write Results 	- Write Logs 	- Capturing the screenshots for failed tests	- Start stop driver ( browser ) - Reading test data	- Reading locator data
+	
+	
+	--- com.actitime.base
+	    BaseClass.java ( This will have all the framework level reusable code
+	
+	--- com.actitime.tests
+		Login.java extends BaseClass ( will have all the login related test cases )
+		Projects.java extends BaseClass ( will have all the projects related test cases )
+		Customer.java extends BaseClass ( will have all the customer related test cases )
+		
+	--- com.actitime.utils
+		CommonUtils.java extends BaseClass ( this will have all the reusable code which is required by many test cases )
+	    ProjectsUtils.java extends BaseClass ( will have reusbale code required by most of the projects module test cases )
+		
+	data ( folder )
+		locatordata.xlsx ( will have all the locators or xpaths)
+		testdata.xlsx ( this will have all the test data )
+		config.properties ( all the high level configuration data like browser , environment etc )
+	
+	results ( folder )
+		results.txt ( will write high level results , which test case passed, which has failed etc )
+		logs.txt ( will have the logs for every test case , this will help in debugging the failed tests )'
+		Screenshots ( folder )
+			Under this folder all the screenshots of the failed tests will be stored..
+			 for eg login_001.png
+			 
+	utilities ( folder )
+		chromedriver.exe
+		gecodriver.exe 
+			
+		
+		
+
+		
+		
+		
+		
+	
+	
