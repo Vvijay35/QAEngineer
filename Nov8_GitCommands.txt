@@ -1,0 +1,20 @@
+Reference - https://www.naukri.com/learning/articles/git-commands-with-examples/
+
+git config --global user.name tutorpatil
+git config --global user.email tutorpatil@gmail.com
+git clone https://github.com/TutorPatil/NovMorningBatchGit.git
+cd NovMorningBatchGit/
+git branch testcase_001
+git add FILENAME
+git commit -m "MESSAGE FOR COMMIT"
+git push
+git push --set-upstream origin testcase_001
+
+From Eclipse
+
+Right click on Project and Team Share Project
+Create a Git repository in the parent folder of the project
+Team add to index
+
+
+
